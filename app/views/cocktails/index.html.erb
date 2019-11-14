@@ -1,2 +1,19 @@
-<h1>Cocktails#index</h1>
-<p>Find me in app/views/cocktails/index.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.f1g.fr/media/madame/1900x1900/sites/default/files/img/2018/05/la-felicita-a-station-f_0.jpg);">
+  <div class="container">
+    <h1><strong>The best cocktails</strong> <span id="banner-typed-text"></span> !</h1>
+    <p>Order online or come visit us</p>
+  </div>
+</div>
+
+
+
+<h1>Cocktails</h1>
+<p>Here is the list of our cocktails. Count(<%= @cocktails.count %>)</p>
+
+<% @cocktails.each do |cocktail| %>
+<h1><%= cocktail.name %></h1>
+<%= link_to "See details", cocktail_path(cocktail), class: "btn btn-primary"%>
+<% end %>
+
+<%= link_to "Add new cocktail", new_cocktail_path, class: "btn btn-success"%>
+
