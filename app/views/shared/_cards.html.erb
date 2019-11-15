@@ -4,7 +4,11 @@
   <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :fill %>
   <div class="card-product-infos">
     <h2><%= cocktail.name %></h2>
-    <p>Ingredients:<strong> <%= cocktail.doses.name %></strong></p>
+    <p><u>Ingredients:</u> <% cocktail.doses.each do |dose|%> </p>
+     <p style="font-size: 12px; color: #357f45;">
+        <%= dose.ingredient.name %>
+     </p>
+      <% end %>
   </div>
 </div>
   <% end %>
