@@ -1,9 +1,14 @@
-<h1>Add a new cocktail to our list!</h1>
+<div class="banner parallax" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.f1g.fr/media/madame/1900x1900/sites/default/files/img/2018/05/visite-guidee-de-la-felicita-a-station-f_0.jpg);">
+</div>
 
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit, class: "btn btn-primary"%>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-<% end %>
-<%= link_to "Home Page", cocktails_path, class: "btn btn-warning"%>
+<div class="container">
+  <h3><strong>Add your...</strong> <span id="banner-typed-text2"></span></h3>
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.button :submit, class: "brk-btn"%>
+  <% end %>
+</div>
+
+

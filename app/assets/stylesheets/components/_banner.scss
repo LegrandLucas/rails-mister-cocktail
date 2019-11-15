@@ -6,7 +6,7 @@
 
 .banner h1 {
   margin: 0;
-  color: white;
+  color: #72f58f;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
@@ -17,4 +17,19 @@
   color: white;
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("https://i.f1g.fr/media/madame/1900x1900/sites/default/files/img/2018/05/la-felicita-a-station-f_0.jpg");
+
+  /* Set a specific height */
+  height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }

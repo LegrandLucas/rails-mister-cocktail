@@ -1,20 +1,19 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.f1g.fr/media/madame/1900x1900/sites/default/files/img/2018/05/la-felicita-a-station-f_0.jpg);">
+<div class="banner parallax" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://i.f1g.fr/media/madame/1900x1900/sites/default/files/img/2018/05/la-felicita-a-station-f_0.jpg);">
   <div class="container">
     <h1><strong>The best cocktails</strong> <span id="banner-typed-text"></span> !</h1>
-    <p>Order online or come visit us</p>
+    <p><strong>Order online or come visit us...</strong></p>
   </div>
 </div>
 
-<%= cl_image_tag("https://res.cloudinary.com/djssnnpj1/image/upload/v1573813882/otvfb692f2qpbahw5es0.jpg",
-      width: 400, height: 300, crop: :fill) %>
-
-<h1>Cocktails</h1>
-<p>Here is the list of our cocktails. Count(<%= @cocktails.count %>)</p>
-
-<% @cocktails.each do |cocktail| %>
-<h1><%= cocktail.name %></h1>
-<%= link_to "See details", cocktail_path(cocktail), class: "btn btn-primary"%>
-<% end %>
-
-<%= link_to "Add new cocktail", new_cocktail_path, class: "btn btn-success"%>
-
+<div class="container">
+   <h1><u>Cocktails</u></h1>
+    <p>Here is the list of our cocktails. Count(<%= @cocktails.count %>)</p>
+      <div class="row">
+        <% @cocktails.each do |cocktail| %>
+          <div class="col-sm-12 col-md-4">
+          <%= render "shared/cards", cocktail: cocktail %>
+      </div>
+     <% end %>
+  </div>
+  <%= link_to "Add a cocktail", new_cocktail_path, class: "brk-btn2 mr-4" %>
+</div>

@@ -1,0 +1,11 @@
+
+  <%= link_to cocktail_path(cocktail), :action => 'go' do %>
+<div class="card-product">
+  <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :fill %>
+  <div class="card-product-infos">
+    <h2><%= cocktail.name %></h2>
+    <p>Ingredients:<strong> <%= cocktail.doses.name %></strong></p>
+  </div>
+</div>
+  <% end %>
+
