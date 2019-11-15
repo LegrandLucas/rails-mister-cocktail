@@ -5,7 +5,10 @@ class CocktailsController < ApplicationController
     @cocktails = Cocktail.all
   end
 
-  def show; end
+  def show
+    @cocktail = Cocktail.find(params[:id])
+    @dose = Dose.new
+  end
 
   def new
     @cocktail = Cocktail.new
@@ -29,7 +32,7 @@ class CocktailsController < ApplicationController
 
   def destroy
     @cocktail.destroy
-    redirect_to cocktail_path(@cocktail)
+    redirect_to cocktails_path
   end
 
   private
